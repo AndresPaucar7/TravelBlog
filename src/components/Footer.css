@@ -1,0 +1,59 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-image: url('https://newsroom.aaa.com/wp-content/uploads/2023/10/iStock-816320512-1024x453.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #000;
+}
+
+.footer-section,
+.footer-logo,
+.footer-subscribe {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-section p {
+  margin: 10px 0;
+  color: #000;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #000;
+  font-size: 20px;
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-form input {
+  padding: 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.subscribe-form button {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.footer-logo img {
+  height: 60px;
+}
+
+.footer-logo p {
+  margin-top: 10px;
+  color: #000;
+}
