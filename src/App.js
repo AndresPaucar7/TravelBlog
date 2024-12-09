@@ -8,6 +8,9 @@ import Africa from './components/Africa';
 import Footer from './components/Footer';
 import BrazilBlog from './components/blog/BrazilBlog';
 import './App.css';
+import SignIn from './components/Login'
+
+import SignUpRequestForm from './components/SignUpRequestForm';
 
 const App = () => {
   return (
@@ -16,7 +19,9 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<MainSection />} />
-          <Route path="/brazil-blog" element={<BrazilBlog />} /> 
+          <Route path="/brazil-blog" element={<BrazilBlog />} />
+          <Route path="/signup" element={<SignUpRequestForm />} /> 
+          <Route path="/login" element={<SignIn />} />
         </Routes>
         <SouthAmerica />
         <Asia />
