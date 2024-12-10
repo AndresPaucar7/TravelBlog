@@ -7,41 +7,37 @@ import Asia from './components/Asia';
 import Africa from './components/Africa';
 import Footer from './components/Footer';
 import BrazilBlog from './components/blog/BrazilBlog';
-import './App.css';
 import SignIn from './components/SignIn';
-import SignUpRequestForm from './components/SignUpRequestForm';
 import Security from './components/Security';
+import RegistrationForm from './components/RegistrationForm';
+import SignUpRequestForm from './components/SignUpRequestForm';
 
 const App = () => {
   return (
     <Router>
-      <SignUpRequestForm />
-      <div className="App">
-        <Header /> 
+      <div>
+        <Header />
         <Routes>
-          <Route 
-            path="/" 
+          <Route
+            path="/"
             element={
               <>
                 <MainSection />
                 <SouthAmerica />
-                <Asia /> 
+                <Asia />
                 <Africa />
               </>
-            }/>
-            
-          <Route
-            path="/brazil-blog"
-            element={<Security element={<BrazilBlog />} />}
+            }
           />
-          <Route path="/signup" element={<SignUpRequestForm />} />
+          <Route path="/brazil-blog" element={<Security element={<BrazilBlog />} />} />
           <Route path="/login" element={<SignIn />} />
+          <Route path="/register" element={<RegistrationForm />} />
+          <Route path="/signup" element={<SignUpRequestForm />} />
         </Routes>
         <Footer />
       </div>
-    </Router> 
+    </Router>
   );
 };
 
 export default App;
-

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
@@ -10,46 +10,50 @@ const SignIn = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch( 'http://localhost:8000/api/v1/login', {
+      const response = await fetch('http://localhost:8000/api/v1/login', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json'},
-        credentials: 'include', 
-        body: JSON.stringify({ email, password })
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ email, password }),
       });
 
       if (response.ok) {
         navigate('/brazil-blog');
       }
-
     } catch (error) {
       console.error('Error:', error);
     }
-
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Sign In </h2>
-      <div>
-        <label>Email: </label>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <h2>Sign In</h2>
         <input
           type="email"
+          placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          required 
+          required
         />
-      </div>
-      <div>
-        <label>Password:</label>
         <input
-          type="password" 
-          value={password} 
+          type="password"
+          placeholder="Password"
+          value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
         />
+        <button type="submit">Sign In</button>
+      </form>
+
+      <div>
+        <h3>Become a member</h3>
+        <p>Join us today and start exploring the Brazil Blog!</p>
+        <Link to="/signup">
+          <button>Sign Up</button>
+        </Link>
       </div>
-      <button>Sign In</button>
-    </form>
+    </div>
   );
 };
 
