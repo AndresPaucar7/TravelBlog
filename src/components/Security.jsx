@@ -9,7 +9,7 @@ const Security = ({ element }) => {
 
     const verifyAuth = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/v1/homepage', {
+        const response = await fetch('https://travelbloggerservice.onrender.com/api/v1/homepage', {
           method: 'GET',
           credentials: 'include'
         });

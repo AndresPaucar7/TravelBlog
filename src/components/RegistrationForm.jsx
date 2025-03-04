@@ -14,7 +14,7 @@ const RegistrationForm = () => {
     const requestBody = { firstName, lastName, email, password };
 
     try {
-      const response = await fetch('http://localhost:8000/api/v1/registration', {
+      const response = await fetch('https://travelbloggerservice.onrender.com/api/v1/registration', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(requestBody),

@@ -8,7 +8,7 @@ function SignUpRequestForm() {
     const requestBody = { email: email };
 
     try {
-      const response = await fetch('http://localhost:8000/api/v1/requestsignup', {
+      const response = await fetch('https://travelbloggerservice.onrender.com/api/v1/requestsignup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
